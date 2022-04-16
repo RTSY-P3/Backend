@@ -1,0 +1,120 @@
+module.exports = {
+  up: (queryInterface, Sequelize) => {
+    return queryInterface.bulkInsert(
+      'users',
+      [
+        {
+          name: 'John Wick',
+          email: 'john@codr.com',
+          password: '$321!pass!123$',
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          name: 'Fujii Jacek',
+          email: 'fujike@codr.com',
+          password: '$ss!123$',
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          name: 'Dai Akira',
+          email: 'dai@codr.com',
+          password: '$321!pass!123$',
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          name: 'Hussein Alicia',
+          email: 'alicia@codr.com',
+          password: '$321!pass!123$',
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          name: 'Ray Allen',
+          email: 'rallen@codr.com',
+          password: '$321!pass!123$',
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          name: 'Kobe Bryant',
+          email: 'kbryant@codr.com',
+          password: '$321!pass!123$',
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          name: 'Isa Garba',
+          email: 'isag@codr.com',
+          password: '$321!pass!123$',
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          name: 'Feng Bongani',
+          email: 'bogani@codr.com',
+          password: '$321!pass!123$',
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          name: 'Udo Noel',
+          email: 'nelu@codr.com',
+          password: '$321!pass!123$',
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          name: 'Soto Mphon',
+          email: 'soto@codr.com',
+          password: '$321!pass!123$',
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          name: 'Rabiu Jesus',
+          email: 'rabiu@codr.com',
+          password: '$321!pass!123$',
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          name: 'Kanye West',
+          email: 'kwest@codr.com',
+          password: '$321!pass!123$',
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          name: 'J Cole',
+          email: 'jcole@codr.com',
+          password: '$321!pass!123$',
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          name: 'John Wick',
+          email: 'john@codr.com',
+          password: '$321!pass!123$',
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          name: 'John Wick',
+          email: 'john@codr.com',
+          password: '$321!pass!123$',
+          createdAt: new Date(),
+          updatedAt: new Date()
+        }
+      
+      ],
+      {}
+    )
+  },
+
+  down: (queryInterface, Sequelize) => {
+    return queryInterface.bulkDelete('users', null, {})
+  }
+}
