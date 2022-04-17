@@ -32,7 +32,7 @@ const UpdateProject = async (req, res) => {
 
 const DeleteProject = async (req, res) => {
   try {
-    await Project.destroy({ where: { id: req.params.post_id } })
+    await Project.destroy({ where: { id: req.params.project_id } })
     res.send({ msg: 'Project Deleted', payload: req.params.project_id, status: 'Ok' })
   } catch (error) {
     throw error
