@@ -7,17 +7,6 @@
     "dev": "nodemon --ignore client/ app.js",
     "start": "node app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RTSY-P3/Backend.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/RTSY-P3/Backend/issues"
-  },
-  "homepage": "https://github.com/RTSY-P3/Backend#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "body-parser": "^1.20.0",
@@ -26,7 +15,6 @@
     "express": "^4.17.3",
     "jsonwebtoken": "^8.5.1",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.15",
     "pg": "^8.7.3",
     "sequelize": "^6.19.0"
   }
