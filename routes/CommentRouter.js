@@ -7,3 +7,4 @@ router.post('/', middleware.stripToken, middleware.verifyToken, controller.Creat
 router.delete('/:comment_id', middleware.stripToken, middleware.verifyToken, controller.DeleteComment)
 
 module.exports = router
+4
