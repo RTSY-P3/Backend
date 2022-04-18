@@ -13,6 +13,9 @@ module.exports = (sequelize, DataTypes) => {
       Project.belongsTo(models.User, {
         foreignKey: 'userId'
       })
+      Project.hasMany(models.Comments, {
+        foreignKey:'userId'
+      })
     }
   }
   Project.init({
