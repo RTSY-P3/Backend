@@ -18,17 +18,6 @@ const CreateComment = async (req, res) => {
   }
 }
 
-const UpdateComment = async (req, res) => {
-  try {
-    const comment = await Comment.update(
-      { ...req.body },
-      { where: { id: req.params.comment_id }, returning: true }
-    )
-    res.send(comment)
-  } catch (error) {
-    throw error
-  }
-}
 
 const DeleteComment = async (req, res) => {
   try {
@@ -42,6 +31,5 @@ const DeleteComment = async (req, res) => {
 module.exports = {
   GetComments,
   CreateComment,
-  UpdateComment,
   DeleteComment
 }
