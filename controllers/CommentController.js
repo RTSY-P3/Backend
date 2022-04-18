@@ -2,8 +2,8 @@ const { Post } = require('../models')
 
 const GetComments = async (req, res) => {
   try {
-    const posts = await Post.findAll()
-    res.send(posts)
+    const comments = await Coment.findAll()
+    res.send(comments)
   } catch (error) {
     throw error
   }
