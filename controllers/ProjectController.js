@@ -54,8 +54,8 @@ const getProjectsAndComments = async (req, res) => {
 
 const getYourProjects = async (req, res) => {
   try { 
-    const getYourProjects = await Project.findAll({ 
-      include: [{ model: User, as: 'User'}]})
+    const getYourProjects = await User.findAll({ 
+      include: [{ model: Project, as: 'Projects'}, {model: Comments, as: 'Comments'}]})
     res.send(getYourProjects)
   } catch (error) {
     throw error 
