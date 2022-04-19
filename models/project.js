@@ -34,7 +34,5 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'Project',
     tableName: 'projects'
   });
-  // const count = await Project.count();
-  // console.log(count); 
   return Project;
 };
