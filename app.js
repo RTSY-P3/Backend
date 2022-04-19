@@ -17,4 +17,4 @@ app.use('/auth', AuthRouter)
 app.use('/projects', ProjectRouter)
 app.use('/projects/comments', CommentRouter)
 
-app.listen(PORT, () => console.log(`Server Running On Port: ${PORT} 🫠`))
+app.listen(PORT, () => console.log(`Server Running On Port: ${PORT}`))

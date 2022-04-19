@@ -1,5 +1,6 @@
 const { Project } = require('../models')
 const { Comments } = require('../models')
+const { User } = require('../models')
 
 const GetProject = async (req, res) => {
   try {
@@ -51,10 +52,20 @@ const getProjectsAndComments = async (req, res) => {
   }
 }
 
+const getYourProjects = async (req, res) => {
+  try { 
+    const getYourProjects = await User.findAll({ 
+      include: [{ model: Project, as: 'Projects'}, {model: Comments, as: 'Comments'}]})
+    res.send(getYourProjects)
+  } catch (error) {
+    throw error 
+  }
+}
 module.exports = {
   GetProject,
   CreateProject,
   UpdateProject,
   DeleteProject,
-  getProjectsAndComments
+  getProjectsAndComments,
+  getYourProjects
 }
