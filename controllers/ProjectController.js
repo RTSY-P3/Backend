@@ -4,7 +4,7 @@ const { User } = require('../models')
 
 const GetProject = async (req, res) => {
   try {
-    const projects = await Project.findAll()
+    const projects = await Project.findAll({ include: [{model: Comments }]})
     res.send(projects)
   } catch (error) {
     throw error
@@ -71,4 +71,3 @@ module.exports = {
 }
 
 
-// include: [{ model: Project, as: 'Projects'}, {model: Comments, as: 'Comments'}]})
