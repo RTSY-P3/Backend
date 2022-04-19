@@ -25,8 +25,8 @@ module.exports = {
           updatedAt: new Date()
         },
         {
-          name: 'Hussein Alicia',
-          email: 'alicia@codr.com',
+          name: 'Neo',
+          email: 'Keanu@TheOne.com',
           passwordDigest: '$321!pass!123$',
           createdAt: new Date(),
           updatedAt: new Date()
