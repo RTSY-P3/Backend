@@ -64,7 +64,7 @@ const getYourProjects = async (req, res) => {
 
 const projectDetails = async (req, res) => {
   try {
-    const details = await Project.findOne()
+    const details = await Project.findByPk()
     res.send(details)
   } catch (error) {
     throw error
