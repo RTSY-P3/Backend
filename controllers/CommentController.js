@@ -19,6 +19,8 @@ const CreateComment = async (req, res) => {
 }
 
 
+
+
 const DeleteComment = async (req, res) => {
   try {
     await Comments.destroy({ where: { id: req.params.comment_id } })
