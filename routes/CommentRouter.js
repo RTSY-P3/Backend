@@ -6,5 +6,5 @@ router.get('/', controller.GetComments)
 router.post('/', middleware.stripToken, middleware.verifyToken, controller.CreateComment)
 router.delete('/:comment_id', middleware.stripToken, middleware.verifyToken, controller.DeleteComment)
 
-
 module.exports = router
+
