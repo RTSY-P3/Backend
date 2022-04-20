@@ -4,7 +4,7 @@ const { User } = require('../models')
 
 const GetProject = async (req, res) => {
   try {
-    const projects = await Project.findAll()
+    const projects = await Project.findAll({ include: [{model: Comments }]})
     res.send(projects)
   } catch (error) {
     throw error
@@ -54,7 +54,7 @@ const getProjectsAndComments = async (req, res) => {
 
 const getYourProjects = async (req, res) => {
   try { 
-    const getYourProjects = await User.findAll({ 
+    const getYourProjects = await User.findByPk(req.params.user_id, {
       include: [{ model: Project, as: 'Projects'}, {model: Comments, as: 'Comments'}]})
     res.send(getYourProjects)
   } catch (error) {
@@ -69,3 +69,5 @@ module.exports = {
   getProjectsAndComments,
   getYourProjects
 }
+
+
