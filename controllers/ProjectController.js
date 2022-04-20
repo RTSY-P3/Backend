@@ -61,13 +61,24 @@ const getYourProjects = async (req, res) => {
     throw error 
   }
 }
+
+const projectDetails = async (req, res) => {
+  try {
+    const details = await Project.findOne()
+    res.send(details)
+  } catch (error) {
+    throw error
+  }
+}
+
 module.exports = {
   GetProject,
   CreateProject,
   UpdateProject,
   DeleteProject,
   getProjectsAndComments,
-  getYourProjects
+  getYourProjects,
+  projectDetails
 }
 
 
