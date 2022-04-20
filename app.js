@@ -16,5 +16,6 @@ app.use(bodyParser.json())
 app.use('/auth', AuthRouter)
 app.use('/projects', ProjectRouter)
 app.use('/projects/comments', CommentRouter)
+app.use('/comments', CommentRouter)
 
 app.listen(PORT, () => console.log(`Server Running On Port: ${PORT}`))

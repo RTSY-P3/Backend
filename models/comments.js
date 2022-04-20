@@ -25,6 +25,7 @@ module.exports = (sequelize, DataTypes) => {
       references: {
         model: 'users',
         key: 'id'
+        
       }
     }
   }, 
